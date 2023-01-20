@@ -3,3 +3,25 @@
     font-weight: $weight
     font-size: $size
     line-height: $lineheight
+
+@mixin large-screen 
+    @media only screen and ( max-width: 1441px )
+        @content
+    
+@mixin glassmorphism-effect 
+    background: rgba(255, 255, 255, .35)
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, .37)
+    backdrop-filter: blur(7.5px)
+
+@mixin transition($time: 200ms)
+    transition: all $time cubic-bezier(.175, .885, .32, 1.275)
+
+@mixin transition-ease($time: 200ms)
+    transition: all $time ease-in-out
+
+@mixin ellipse($line: 2)
+    display: -webkit-box
+    -webkit-line-clamp: $line 
+    -webkit-box-oriental: vertical
+    overflow: hidden
+    text-overflow: ellipsis
