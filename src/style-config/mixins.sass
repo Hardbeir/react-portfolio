@@ -1,3 +1,5 @@
+@import "./variable"
+    
 @mixin typography($size: 16px, $weight: 400, $lineheight: 24px)
     font-style: normal 
     font-weight: $weight
@@ -5,7 +7,11 @@
     line-height: $lineheight
 
 @mixin large-screen 
-    @media only screen and ( max-width: 1441px )
+    @media only screen and ( min-width: 1441px )
+        @content
+
+@mixin medium-screen
+    @media only screen and ( min-width: 1024px )
         @content
     
 @mixin glassmorphism-effect 
