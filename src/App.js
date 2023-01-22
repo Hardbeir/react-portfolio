@@ -5,8 +5,10 @@ import Skills from './components/skills'
 import Portfolio from './components/portfolio'
 import Blogs from './components/blogs'
 import Contact from './components/contact'
+import Footer from './components/footer'
 
 import './app.sass'
+
 
 const App = () => {
   return (
@@ -16,6 +18,7 @@ const App = () => {
         <Portfolio/>
         <Blogs/>
         <Contact/>
+        <Footer/>
     </div>
   )
 }

@@ -6,7 +6,7 @@ import "./style.sass"
 
 const CallToAction = ({text, action, icon}) => {
   return (
-    <div className="call-to-action">
+    <div className="call-to-action" onClick={action}>
         <span className="text">
             {text}
         </span>

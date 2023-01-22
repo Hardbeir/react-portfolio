@@ -2,6 +2,7 @@ import React from "react";
 
 import logo from "../../../images/logo.png";
 import CallToAction from "../../shared/CallToAction";
+import {scrollToSection} from "../../utils/helpers";
 
 import "./style.sass";
 
@@ -15,10 +16,10 @@ const Navigation = () => {
                 />
             </div>
             <div className="navigation">
-                <span className="navigation-item">Skills</span>
-                <span className="navigation-item">Portfolio</span>
-                <span className="navigation-item">Blogs & Articles</span>
-                <CallToAction text="Contact me" />
+                <span className="navigation-item" onClick={() => scrollToSection("skills")}>Skills</span>
+                <span className="navigation-item"onClick={() => scrollToSection("portfolio")}>Portfolio</span>
+                <span className="navigation-item"onClick={() => scrollToSection("blogs")}>Blogs & Articles</span>
+                <CallToAction text="Contact me" action={() => scrollToSection("contact")} />
             </div>
         </div>
     );
